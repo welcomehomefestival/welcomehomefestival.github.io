@@ -112,7 +112,7 @@
         } else {
             navbar.removeClass("nav-scroll");
         }
-        logo.attr('src', 'images/logo-light.png');
+        logo.attr('src', 'images/welcomehome_logo.png');
     });
     
     /*----------------------------------------------------

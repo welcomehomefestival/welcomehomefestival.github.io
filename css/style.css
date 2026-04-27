@@ -4242,3 +4242,63 @@ only screen and (min-width: 576px) and (max-width: 767px),
         background-attachment: scroll !important;
     }
 }
+
+/* aggiunte */
+/* PORTFOLIO SLIDER FIX */
+.portfolio-slider {
+    padding-top: 60px;
+}
+
+.portfolio-slider .item {
+    position: relative !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+}
+
+.portfolio-slider .item a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-slider .item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-slider .item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-slider .hover-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.portfolio-slider .item a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    transition: 0.3s;
+}
+
+.portfolio-slider .item:hover a::after {
+    background: rgba(0,0,0,0.5);
+}
+
+/* nasconde i canvas decorativi vecchi */
+.portfolio-slider .canvas-1,
+.portfolio-slider .canvas-2 {
+    display: none;
+}

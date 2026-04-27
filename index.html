@@ -78,23 +78,38 @@
                     <h1 class="wow" data-splitting>Portfolio</h1>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-md-12">
-                    <div class="portfolio fade-in section-padding">
+                    <div class="owl-carousel owl-theme portfolio-slider">
+
                         <div class="item">
-                            <a href="portfolio.html" class="img portrait" style="background-image: url('images/portfolio/1.jpg');">
-                                <div class="overlay"></div> <span class="hover-text">Wedding Photography</span>
+                            <a href="portfolio.html">
+                                <img src="images/portfolio/1.jpg" alt="">
+                                <span class="hover-text">Wedding Photography</span>
                             </a>
-                            <a href="portfolio.html" class="img landscape" style="background-image: url('images/portfolio/2.jpg');">
-                                <div class="overlay"></div> <span class="hover-text">Art Photography</span>
-                            </a>
-                            <a href="portfolio.html" class="img landscape" style="background-image: url('images/portfolio/3.jpg');">
-                                <div class="overlay"></div> <span class="hover-text">Travel Photography</span>
-                            </a>
-                            <a href="portfolio.html" class="img portrait" style="background-image: url('images/portfolio/4.jpg');">
-                                <div class="overlay"></div> <span class="hover-text">Fashion Photography</span>
-                            </a> <img class="canvas-1" src="images/canvas-1.png" width="373" alt="Canvas 1" /> <img class="canvas-2" src="images/canvas-2.png" width="373" alt="Canvas 2" />
                         </div>
+
+                        <div class="item">
+                            <a href="portfolio.html">
+                                <img src="images/portfolio/2.jpg" alt="">
+                                <span class="hover-text">Art Photography</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="portfolio.html">
+                                <img src="images/portfolio/3.jpg" alt="">
+                                <span class="hover-text">Travel Photography</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="portfolio.html">
+                                <img src="images/portfolio/4.jpg" alt="">
+                                <span class="hover-text">Fashion Photography</span>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -127,6 +142,26 @@
         $(document).ready(function () {
             $("#navbar-container").load("navbar.html");
             $("#footer-container").load("footer.html");
+            $('.portfolio-slider').owlCarousel({
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                smartSpeed: 800,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:2
+                    },
+                    1200:{
+                        items:3
+                    }
+                }
+            });
         });
     </script>
 </body>

@@ -1862,7 +1862,7 @@ input[type="checkbox"] {
 }
 .team .item .con .title span {
     display: block;
-    max-width: calc(12ch + 1em);
+    max-width: calc(18ch + 1em);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

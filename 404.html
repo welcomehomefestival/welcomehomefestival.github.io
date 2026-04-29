@@ -55,54 +55,7 @@
         </div>
     </section>
     <!-- Testiominals -->
-    <section id="testimonials" class="testimonials">
-        <div class="background bg-img bg-imgfixed section-padding" data-overlay-dark="5" data-background="images/slider/01.jpg">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Work together -->
-                    <div class="col-md-5 mb-30">
-                        <h4 class="wow" data-splitting>Let’s capture the perfect shots together.</h4>
-                        <div class="btn-wrap mt-30 text-left wow fadeInUp" data-wow-delay=".9s">
-                            <div class="btn-link"><a href="mailto:hello@gloom.com">hello@gloom.com</a><span class="btn-block color3 animation-bounce"></span></div>
-                        </div>
-                    </div>
-                    <!-- Testiominals -->
-                    <div class="col-md-5 offset-md-2">
-                        <div class="testimonials-box">
-                            <h5>What Are Clients Saying?</h5>
-                            <div class="owl-carousel owl-theme">
-                                <div class="item">
-                                    <p>Working with Gloom was an unforgettable experience. Their attention to detail and creative vision brought our special day to life in the most beautiful way.</p> <span class="quote"><img src="images/quot.png" alt="" loading="lazy"></span>
-                                    <div class="info">
-                                        <div class="author-img"> <img src="images/team/1.jpg" alt="" loading="lazy"> </div>
-                                        <div class="cont">
-                                            <h6>Emily Brown</h6> <span>Customer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <p>Working with Gloom was an unforgettable experience. Their attention to detail and creative vision brought our special day to life in the most beautiful way.</p> <span class="quote"><img src="images/quot.png" alt="" loading="lazy"></span>
-                                    <div class="info">
-                                        <div class="author-img"> <img src="images/team/2.jpg" alt="" loading="lazy"> </div>
-                                        <div class="cont">
-                                            <h6>Jason White</h6> <span>Customer</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Scrolling -->
-    <div class="scrolling scrolling-ticker">
-        <div class="wrapper">
-            <div class="content"> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Light</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Lens</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Focus</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Exposure</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Composition</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Shutter</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Aperture</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Contrast</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Frame</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Portrai</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Capture</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Moment</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Perspective</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Emotion</span> </div>
-            <div class="content"> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Light</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Lens</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Focus</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Exposure</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Composition</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Shutter</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Aperture</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Contrast</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Frame</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Portrai</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Capture</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Moment</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Perspective</span> <span><img src="images/asterisk-icon.svg" alt="" loading="lazy">Emotion</span> </div>
-        </div>
-    </div>
+    <div id="testimonials-container"></div>
     <!-- Footer -->
     <div id="footer-container"></div>
     <!-- jQuery -->
@@ -123,6 +76,14 @@
         $(document).ready(function () {
             $("#navbar-container").load("navbar.html");
             $("#footer-container").load("footer.html");
+            $("#testimonials-container").load("testimonials.html", function () {
+                $("[data-background]").each(function () {
+                    $(this).css(
+                        "background-image",
+                        "url(" + $(this).attr("data-background") + ")"
+                    );
+                });
+            });
         });
     </script>
 </body>

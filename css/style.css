@@ -4303,3 +4303,108 @@ only screen and (min-width: 576px) and (max-width: 767px),
 .portfolio-slider .canvas-2 {
     display: none;
 }
+
+/* EVENTS */
+.events-section {
+    width: 100%;
+    position: relative;
+}
+
+.events-subtitle {
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #999;
+}
+
+.events-title {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.event-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 35px 40px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+
+    transition: all .3s ease;
+}
+
+.event-item:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.event-date {
+    min-width: 120px;
+    text-align: center;
+}
+
+.event-date span {
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.event-date small {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #999;
+}
+
+.event-content {
+    flex: 1;
+    padding: 0 40px;
+}
+
+.event-content h3 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.event-content p {
+    margin: 0;
+    color: #aaa;
+}
+
+.event-link a {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 991px) {
+
+    .events-title {
+        font-size: 50px;
+    }
+
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+    }
+
+    .event-date {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .event-content {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+}

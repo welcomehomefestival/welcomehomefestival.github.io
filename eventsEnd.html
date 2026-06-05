@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Urbanist:wght@300;400;500;600&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Urbanist:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
 
@@ -25,168 +23,99 @@
 
         body{
             min-height:100vh;
-            overflow-x:hidden;
-
+            overflow:hidden;
             display:flex;
             align-items:center;
             justify-content:center;
-
             text-align:center;
             color:#fff;
-
             font-family:'Urbanist',sans-serif;
-
             position:relative;
-
-            opacity:0;
-            animation:pageFade 1.5s ease forwards;
         }
 
         /* FOTO DI SFONDO */
-
         body::before{
             content:"";
             position:absolute;
             inset:0;
-
-            background:url("images/home-slider/1.webp")
-            center center/cover no-repeat;
-
+            background:url("images/home-slider/1.webp") center center/cover no-repeat;
             filter:grayscale(100%);
-
-            transform:scale(1.12);
-            opacity:0;
-
-            animation:bgReveal 2.5s ease forwards;
+            transform:scale(1.05);
         }
 
-        /* OVERLAY */
-
+        /* OVERLAY SCURO */
         body::after{
             content:"";
             position:absolute;
             inset:0;
-
             background:rgba(0,0,0,1);
         }
 
         .container{
             position:relative;
             z-index:2;
-
-            width:100%;
-            max-width:1100px;
-
-            padding:clamp(20px,4vw,50px);
+            max-width:900px;
+            padding:40px;
         }
 
         .logo{
-            width:clamp(140px,18vw,240px);
+            width:220px;
             max-width:80%;
-
-            margin-bottom:clamp(25px,4vw,50px);
-
-            opacity:0;
-            transform:translateY(30px);
-
-            animation:
-                    fadeUp 1.2s ease .4s forwards,
-                    logoFloat 5s ease-in-out infinite 2s;
+            margin-bottom:50px;
+            animation:fadeUp 1s ease forwards;
         }
 
         .small-title{
             letter-spacing:4px;
             text-transform:uppercase;
-
-            font-size:clamp(11px,1.2vw,14px);
-
+            font-size:13px;
             opacity:.65;
-
             margin-bottom:20px;
-
             animation:fadeUp 1s ease .2s forwards;
             opacity:0;
         }
 
         h1{
             font-family:'Syne',sans-serif;
-
-            font-size:clamp(34px,8vw,90px);
-
+            font-size:clamp(42px,7vw,90px);
             font-weight:800;
-            line-height:.95;
-
+            line-height:1;
             text-transform:uppercase;
-
-            margin-bottom:25px;
-
+            margin-bottom:30px;
             animation:fadeUp 1s ease .4s forwards;
             opacity:0;
         }
 
         .description{
-            max-width:700px;
-
+            max-width:650px;
             margin:auto;
-
-            font-size:clamp(15px,2vw,20px);
-
+            font-size:18px;
             line-height:1.8;
-
             opacity:.8;
-
             animation:fadeUp 1s ease .6s forwards;
             opacity:0;
         }
 
         .social{
-            margin-top:clamp(30px,5vw,60px);
-
+            margin-top:50px;
             animation:fadeUp 1s ease .8s forwards;
             opacity:0;
         }
 
         .social a{
-            display:inline-block;
-
-            color:#fff;
+            color:white;
             text-decoration:none;
-
-            font-size:clamp(11px,1.2vw,13px);
-
             letter-spacing:2px;
             text-transform:uppercase;
-
+            font-size:13px;
+            border:1px solid rgba(255,255,255,.3);
             padding:14px 28px;
-
-            border:1px solid rgba(255,255,255,.35);
-
-            transition:.35s ease;
+            transition:.3s;
         }
 
         .social a:hover{
-            background:#fff;
-            color:#000;
-        }
-
-        @keyframes pageFade{
-            from{
-                opacity:0;
-            }
-            to{
-                opacity:1;
-            }
-        }
-
-        @keyframes bgReveal{
-            from{
-                opacity:0;
-                transform:scale(1.18);
-            }
-            to{
-                opacity:1;
-                transform:scale(1.05);
-            }
+            background:white;
+            color:black;
         }
 
         @keyframes fadeUp{
@@ -200,51 +129,16 @@
             }
         }
 
-        @keyframes logoFloat{
-            0%{
-                transform:translateY(0);
-            }
-            50%{
-                transform:translateY(-8px);
-            }
-            100%{
-                transform:translateY(0);
-            }
-        }
-
-        /* TABLET */
-
-        @media (max-width: 992px){
-
-            body{
-                overflow-y:auto;
-            }
-
-            .container{
-                padding:40px 30px;
-            }
-        }
-
-        /* SMARTPHONE */
-
-        @media (max-width: 576px){
-
-            body::before{
-                background-position:center center;
-            }
-
-            h1{
-                line-height:1.05;
-            }
+        @media(max-width:768px){
 
             .description{
-                line-height:1.7;
+                font-size:16px;
             }
 
-            .social a{
-                width:100%;
-                max-width:280px;
+            .logo{
+                width:170px;
             }
+
         }
 
     </style>
@@ -263,19 +157,19 @@
     </div>
 
     <h1>
-        L'EDIZIONE 2026<br>
-        È TERMINATA
+        L'edizione 2026<br>
+        è terminata
     </h1>
 
     <p class="description">
-        Grazie agli artisti, ai visitatori, ai partner e a tutti coloro che
-        hanno contribuito a rendere possibile questa edizione del festival.
+        Grazie a tutti gli artisti, i visitatori, i partner e i volontari
+        che hanno reso possibile questa edizione del festival.
         Ci rivedremo presto con nuovi progetti, nuove mostre e nuove storie.
     </p>
 
     <div class="social">
         <a href="https://www.instagram.com/welcomehomefestival/" target="_blank">
-            Segui il Festival su Instagram
+            Seguici su Instagram
         </a>
     </div>
 
